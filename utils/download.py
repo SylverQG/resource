@@ -106,10 +106,8 @@ def main() -> None:
     print(f"共 {len(matched)} 个下载项{'（过滤: ' + keyword + '）' if keyword else ''}\n")
 
     for target_rel, file_name, tag_asset, need_extract in matched:
-        # 目标绝对目录：课程根目录 + 相对路径
-        target_dir = os.path.join(
-            REPO_ROOT, "OpenCV_ParkingSpaceRecognition", target_rel
-        )
+        # 目标绝对目录：仓库根目录 + 清单中的相对路径
+        target_dir = os.path.join(REPO_ROOT, target_rel)
         dest = os.path.join(target_dir, file_name)
         url = BASE_URL + tag_asset
 
