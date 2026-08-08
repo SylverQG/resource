@@ -1,0 +1,13 @@
+# download_release.txt
+# 格式：目标目录(相对本文件所在课程根目录) | 附件文件名 | Release tag/附件 | 是否解压(y/n)
+# 注意：路径与文件名不要用竖线字符
+
+OpenCV_ParkingSpaceRecognition/第10章：项目实战-文档扫描OCR识别/Scan | tesseract-ocr-setup-4.00.00dev.exe | exe-01-tesseract-ocr-v4/tesseract-ocr-setup-4.00.00dev.exe | n
+OpenCV_ParkingSpaceRecognition/第11-12章：图像特征 | opencv_python-3.4.5+contrib-cp36-cp36m-win_amd64.whl | whl-01-opencv-contrib-py3.6/opencv_python-3.4.5+contrib-cp36-cp36m-win_amd64.whl | n
+OpenCV_ParkingSpaceRecognition/第14章：项目实战-停车场车位识别/park | park.zip | data-01-parking-space-recognition/park.zip | y
+OpenCV_ParkingSpaceRecognition/第16-17章：背景建模与光流估计 | test.avi.zip | data-02-test/test.avi.zip | y
+OpenCV_ParkingSpaceRecognition/第18章：Opencv的DNN模块/dnn_blob | dnn_blob.zip | model-01-dnn_blob_googlenet_caffe/dnn_blob.zip | y
+OpenCV_ParkingSpaceRecognition/第19章：项目实战-目标追踪 | tracking.zip | data-03-tracking/tracking.zip | y
+OpenCV_ParkingSpaceRecognition/第21章：人脸关键点定位/landmark | shape_predictor_68_face_landmarks.dat | data-04-face-landmark-detection/shape_predictor_68_face_landmarks.dat | n
+OpenCV_ParkingSpaceRecognition/第21章：项目实战-疲劳检测/blink-detection | shape_predictor_68_face_landmarks.dat | data-04-face-landmark-detection/shape_predictor_68_face_landmarks.dat | n
+OpenCV_ParkingSpaceRecognition/第21章：项目实战-疲劳检测/blink-detection | test.mp4 | data-05-blink-detection/test.mp4 | n
