@@ -10,7 +10,7 @@ Release 内包含以下文件（单个文件直接下载，无需打包）：
 
 # 使用脚本下载到当前目录
 ```bash
-python utils/download.py 第21章：项目实战-疲劳检测
+python utils/download-opencv.py 第21章：项目实战-疲劳检测
 ```
 
 下载后两个文件会放在 blink-detection/ 目录下，与 detect_blinks.py 同级。

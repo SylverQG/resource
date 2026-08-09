@@ -6,7 +6,7 @@ SIFT（尺度不变特征变换）在 OpenCV 官方主包（ cv2 ）里是 收�
 
 # 使用脚本下载到当前目录
 ```bash
-python utils/download.py 第11-12章
+python utils/download-opencv.py 第11-12章
 ```
 
 

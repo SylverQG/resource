@@ -4,7 +4,7 @@
 
 # 使用脚本下载到当前目录
 ```bash
-python utils/download.py 第10章
+python utils/download-opencv.py 第10章
 ```
 
 下载后得到 tesseract-ocr-setup-4.00.00dev.exe，双击安装。

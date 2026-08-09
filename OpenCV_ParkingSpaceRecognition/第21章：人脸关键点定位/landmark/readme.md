@@ -4,5 +4,5 @@
 
 # 使用脚本下载并解压到对应子文件夹
 ```bash
-python utils/download.py 第21章：人脸关键点定位
+python utils/download-opencv.py 第21章：人脸关键点定位
 ```

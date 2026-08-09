@@ -54,7 +54,13 @@ def download_file(url: str, dest: str) -> None:
         req = urllib.request.Request(url)
         mode = "wb"
 
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        # 如果服务器不支持 Range 请求而返回完整内容，改用覆盖模式
+        if local_size > 0 and resp.status != 206:
+            mode = "wb"
+            local_size = 0
+            # 重新用覆盖模式打开文件
+            open(dest, "wb").close()
         total = int(resp.headers.get("Content-Length", 0)) + local_size
         downloaded = local_size
         with open(dest, mode) as f:

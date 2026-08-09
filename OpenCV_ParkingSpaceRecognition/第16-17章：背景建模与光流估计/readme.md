@@ -7,6 +7,6 @@
 
 # 使用脚本下载并解压到当前目录
 ```bash
-python utils/download.py 第16-17章
+python utils/download-opencv.py 第16-17章
 ```
 

@@ -15,6 +15,6 @@ Release 内包含以下文件（下载后脚本会自动解压）：
 
 # 使用脚本下载并解压到当前目录
 ```bash
-python utils/download.py 第14章
+python utils/download-opencv.py 第14章
 ```
 

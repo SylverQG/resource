@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-download.py
+download-opencv.py
 
-根据清单文件 download_release.txt 批量下载所有章节的资源文件，
-zip 附件自动解压到对应目录。
+根据清单文件 download_release.txt 批量下载 OpenCV_ParkingSpaceRecognition
+课程的所有资源文件，zip 附件自动解压到对应目录。
 
 清单位置（相对仓库根目录）:
     OpenCV_ParkingSpaceRecognition/download_release.txt
 
 清单格式（每行，竖线 | 分隔）:
-    目标目录(相对课程根目录) | 附件文件名 | Release tag/附件名 | 是否解压(y/n)
+    目标目录(相对仓库根目录) | 附件文件名 | Release tag/附件名 | 是否解压(y/n)
 
 用法:
-    python utils/download.py                  # 下载全部
-    python utils/download.py 第14章            # 只下载匹配"第14章"的条目
+    python utils/download-opencv.py                  # 下载全部
+    python utils/download-opencv.py 第14章            # 只下载匹配"第14章"的条目
 """
 
 import os
@@ -62,7 +62,13 @@ def download_file(url: str, dest: str) -> None:
         req = urllib.request.Request(url)
         mode = "wb"
 
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        # 如果服务器不支持 Range 请求而返回完整内容，改用覆盖模式
+        if local_size > 0 and resp.status != 206:
+            mode = "wb"
+            local_size = 0
+            # 重新用覆盖模式打开文件
+            open(dest, "wb").close()
         total = int(resp.headers.get("Content-Length", 0)) + local_size
         downloaded = local_size
         with open(dest, mode) as f:

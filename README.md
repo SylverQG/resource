@@ -41,10 +41,10 @@ Python 打造停车场车位智能识别（2021 年），涵盖 OpenCV 图像处
 
 ```bash
 # 下载单个章节
-python utils/download.py 第14章
+python utils/download-opencv.py 第14章
 
 # 下载全部章节
-python utils/download.py
+python utils/download-opencv.py
 ```
 
 ---
@@ -72,14 +72,15 @@ python utils/download-LLM_OC.py
 
 | 工具 | 用途 |
 |---|---|
-| [`download.py`](utils/download.py) | 通用下载器，根据清单批量下载 Release 附件 |
+| [`download-all.py`](utils/download-all.py) | 总下载器，自动顺序运行所有 download-* 脚本 |
+| [`download-opencv.py`](utils/download-opencv.py) | OpenCV 课程通用下载器，根据清单批量下载 Release 附件 |
 | [`download-LLM_OC.py`](utils/download-LLM_OC.py) | LLM_OpenCourse 专用下载器 |
 | [`split_zip.py`](utils/split_zip.py) | 大文件分卷拆分工具（仅当附件超 100MB 时使用） |
 
 ### 下载机制
 
 1. 清单文件 [`OpenCV_ParkingSpaceRecognition/download_release.txt`](OpenCV_ParkingSpaceRecognition/download_release.txt) 记录每个章节的资源地址
-2. `utils/download.py` 读取清单，自动下载并解压到对应目录
+2. `utils/download-opencv.py` 读取清单，自动下载并解压到对应目录
 3. 大文件上传在 GitHub Releases，不占用仓库空间
 
 ---
